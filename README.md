@@ -73,9 +73,9 @@ models:
 - **Issues**: <a href="https://github.com/FAI-Solutions/Continue-NIM-Proxy/issues" rel="me noopener">https://github.com/FAI-Solutions/Continue-NIM-Proxy/issues</a>
 
 
-## Contact
+## License
 
-MIT
+[MIT](LICENSE)
 
 
 ## Keywords
