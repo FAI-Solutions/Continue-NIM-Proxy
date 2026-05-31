@@ -4,6 +4,8 @@ Fixes **Step 3.7 Flash** silently returning empty responses in [Continue](https:
 
 **Root Cause**: Step 3.7 Flash on NVIDIA NIM runs with speculative decoding and includes a `usage` field on **every** streaming chunk. Continue's OpenAI provider interprets any chunk containing `usage` as the final chunk and stops — discarding all content silently, no error shown.
 
+---
+
 ## Overview of the Proxy: 
 
 Sits between Continue and NIM, fixing things per request:
