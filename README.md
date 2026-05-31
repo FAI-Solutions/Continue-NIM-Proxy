@@ -63,3 +63,22 @@ models:
       baseSystemMessage: |
         You are an expert ... # enter your system prompt here
 ```
+
+---
+
+## Keywords
+
+step-3.7-flash empty response, NIM reasoning model silent failure,
+Continue VSCode no reply, continue.dev blank response NIM,
+nvidia nim continue vscode not working,
+stepfun-ai step-3.7-flash not working Continue,
+stepfun step-3.7-flash no reply vscode,
+NVIDIA NIM streaming usage field Continue bug,
+min_p speculative decoding HTTP 400 NIM
+
+## Contact
+
+- **Developer**: Johannes Faber — [fais.udder466@passinbox.com](mailto:fais.udder466@passinbox.com)
+- **Hub-Website**: <a href="https://fai-solutions.github.io/" rel="me noopener">https://fai-solutions.github.io/</a>
+- **Issues**: <a href="https://github.com/FAI-Solutions/Continue-NIM-Proxy/issues" rel="me noopener">https://github.com/FAI-Solutions/Continue-NIM-Proxy/issues</a>
+
