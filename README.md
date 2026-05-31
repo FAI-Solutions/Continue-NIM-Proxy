@@ -80,12 +80,6 @@ models:
 [MIT](LICENSE)
 
 
-## Keywords
+## Summary
 
-step-3.7-flash empty response, NIM reasoning model silent failure,
-Continue VSCode no reply, continue.dev blank response NIM,
-nvidia nim continue vscode not working,
-stepfun-ai step-3.7-flash not working Continue,
-stepfun step-3.7-flash no reply vscode,
-NVIDIA NIM streaming usage field Continue bug,
-min_p speculative decoding HTTP 400 NIM
+This repository contains a practical workaround for *step-3.7-flash empty response*, *Continue VSCode no reply*, *stepfun-ai step-3.7-flash not working Continue*, *min_p speculative decoding HTTP 400 NIM* and related NIM / Continue integration issues. The "solution" `nim_proxy.py` acts as a proxy between NIM and Continue, rewriting the Step 3.7 Flash stream into a Continue-compatible format so the model works again in VSCode / VSCodium. Keep the proxy running while using Step 3.7 Flash; it can remain active alongside other models.
