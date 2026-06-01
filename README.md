@@ -18,7 +18,7 @@ Sits between Continue and NIM, fixing things per request:
 
 ## Requirements
 
-- Python 3 (only standard libraries — tested with python 3.14)
+- Python 3.x (only standard libraries — tested with python 3.14)
 - NVIDIA NIM API key
 
 ## Setup
