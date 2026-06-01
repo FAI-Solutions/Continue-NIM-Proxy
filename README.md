@@ -33,7 +33,7 @@ nim_proxy.py
 open `nim_proxy.py` and change the port by replacing the default `LISTEN_PORT = 7606` with whichever port you want to use (make sure it is not occupied by something else).
 
 
-**2. Run the proxy** (keep this terminal open while using STep 3.7 Flash in Continue)
+**2. Run the proxy** (keep this terminal open while using Step 3.7 Flash in Continue)
 ```bash
 # source your venv if you use one, then run
 python nim_proxy.py
