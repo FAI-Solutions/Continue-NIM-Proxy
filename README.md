@@ -1,4 +1,4 @@
-# NIM Proxy for Step 3.7 Flash in Continue/VSCodium
+# NIM Proxy for Step 3.7 Flash in Continue + VSCode/VSCodium
 
 Fixes **Step 3.7 Flash** silently returning empty responses in [Continue](https://continue.dev/).
 
@@ -13,6 +13,8 @@ Sits between Continue and NIM, fixing things per request:
 1. **Strips `min_p`** from outgoing requests (causes silent HTTP 400)
 2. **Strips `usage`** from content chunks in the streaming response (causes silent empty reply)
 3. **Strips `reasoning`/`reasoning_content`** chunks (they had empty content)
+4. **Preserving `tool_calls`** chunks so Continue can execute tools
+5. Forward almost real-time Streaming
 
 ## Requirements
 
@@ -28,7 +30,7 @@ nim_proxy.py
 
 **1. Setup the port you want to use**
 
-open `nim_proxy.py` and change the port by replacing the default `LISTEN_PORT = 7606` 7606 with whatever you want to use.
+open `nim_proxy.py` and change the port by replacing the default `LISTEN_PORT = 7606` with whichever port you want to use (make sure it is not occupied by something else).
 
 
 **2. Run the proxy** (keep this terminal open while using STep 3.7 Flash in Continue)
