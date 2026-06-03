@@ -1,6 +1,6 @@
 # NIM Proxy for Step 3.7 Flash in Continue + VSCode/VSCodium
 
-Fixes **Step 3.7 Flash** silently returning empty responses in [Continue](https://continue.dev/).
+Fixes **Step 3.7 Flash** (and other models) silently returning empty responses in [Continue](https://continue.dev/).
 
 **Root Cause**: Step 3.7 Flash on NVIDIA NIM runs with speculative decoding and includes a `usage` field on **every** streaming chunk. Continue's OpenAI provider interprets any chunk containing `usage` as the final chunk and stops — discarding all content silently, no error shown.
 
@@ -45,26 +45,22 @@ models:
   - name: Step-3.7-Flash
     provider: openai
     model: stepfun-ai/step-3.7-flash
-    apiBase: http://localhost:7606   # important: proxy, not NIM directly
+    apiBase: http://localhost:7606   # important: proxy instead of https://integrate.api.nvidia.com/v1
     apiKey: your-nim-key-here
-    roles:
-      - chat
-      - edit
-      - apply
-      - summarize
-    capabilities:
-      - tool_use
-    requestOptions:
-      nvext:
-        max_thinking_tokens: 8192
+    roles: [chat, edit, apply, summarize]
+    capabilities: capabilities: [tool_use, image_input]
     defaultCompletionOptions:
-      temperature: 0.50
+      temperature: 0.65
       top_p: 0.95
-      top_k: 30
+      top_k: 35
       contextLength: 262144
       maxTokens: 16384
     chatOptions:
       baseSystemMessage: |
+        You are an expert ... # enter your system prompt here
+      baseAgentSystemMessage: |
+        You are an expert ... # enter your system prompt here
+      basePlanSystemMessage: |
         You are an expert ... # enter your system prompt here
 ```
 
