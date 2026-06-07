@@ -1,4 +1,4 @@
-# NIM Proxy for Step 3.7 Flash in Continue + VSCode/VSCodium
+# NIM Proxy for Step 3.7 Flash, Nemotron 3 Ultra and Kimi k2.6 in Continue + VSCode/VSCodium
 
 Fixes **Step 3.7 Flash** (and other models) silently returning empty responses in [Continue](https://continue.dev/).
 
@@ -80,4 +80,4 @@ models:
 
 ## Summary
 
-This repository contains a practical workaround for *step-3.7-flash empty response*, *Continue VSCode no reply*, *stepfun-ai step-3.7-flash not working Continue*, *min_p speculative decoding HTTP 400 NIM* and related NIM / Continue integration issues. The "solution" `nim_proxy.py` acts as a proxy between NIM and Continue, rewriting the Step 3.7 Flash stream into a Continue-compatible format so the model works again in VSCode / VSCodium. Keep the proxy running while using Step 3.7 Flash; it can remain active alongside other models.
+This repository contains a practical workaround for *step-3.7-flash, Nemotron 3 Ultra and Kimi k2.6 empty response*, *Continue VSCode no reply*, *stepfun-ai step-3.7-flash not working Continue*, *min_p speculative decoding HTTP 400 NIM* and related NIM / Continue integration issues. The "solution" `nim_proxy.py` acts as a proxy between NIM and Continue, rewriting the Step 3.7 Flash stream into a Continue-compatible format so the model works again in VSCode / VSCodium. Keep the proxy running while using Step 3.7 Flash, Nemotron 3 Ultra and Kimi k2.6; it can remain active alongside other models.
