@@ -1,4 +1,4 @@
-# NIM Proxy for Step 3.7 Flash, Nemotron 3 Ultra and Kimi k2.6 in Continue + VSCode/VSCodium
+# NIM Proxy prevents empty reponses in Continue + VSCode/VSCodium
 
 Fixes **Step 3.7 Flash, Nemotron 3 Ultra and Kimi k2.6** (and other models) silently returning empty responses in [Continue](https://continue.dev/).
 
