@@ -1,8 +1,8 @@
 # NIM Proxy for Step 3.7 Flash, Nemotron 3 Ultra and Kimi k2.6 in Continue + VSCode/VSCodium
 
-Fixes **Step 3.7 Flash** (and other models) silently returning empty responses in [Continue](https://continue.dev/).
+Fixes **Step 3.7 Flash, Nemotron 3 Ultra and Kimi k2.6** (and other models) silently returning empty responses in [Continue](https://continue.dev/).
 
-**Root Cause**: Step 3.7 Flash on NVIDIA NIM runs with speculative decoding and includes a `usage` field on **every** streaming chunk. Continue's OpenAI provider interprets any chunk containing `usage` as the final chunk and stops — discarding all content silently, no error shown.
+**Root Cause**: Step 3.7 Flash, Nemotron 3 Ultra and Kimi k2.6 on NVIDIA NIM runs with speculative decoding and includes a `usage` field on **every** streaming chunk. Continue's OpenAI provider interprets any chunk containing `usage` as the final chunk and stops — discarding all content silently, no error shown.
 
 ---
 
@@ -50,7 +50,7 @@ models:
     roles: [chat, edit, apply, summarize]
     capabilities: capabilities: [tool_use, image_input]
     defaultCompletionOptions:
-      temperature: 0.65
+      temperature: 0.7
       top_p: 0.95
       top_k: 35
       contextLength: 262144
